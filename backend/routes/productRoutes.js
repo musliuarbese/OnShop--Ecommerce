@@ -18,7 +18,6 @@ router.get('/', asyncHandler (async(req, res) => {
 //kur don mi shfaq varesisht te id-se qe ti po don me tu shfaq ne prapavije
 router.get('/:id', asyncHandler(async (req, res) => {
     const product = await Product.findById(req.params.id)
-
     if(product){
     res.json(product)
     }else{
